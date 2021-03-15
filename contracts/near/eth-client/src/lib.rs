@@ -3,7 +3,8 @@ use borsh::{BorshDeserialize, BorshSerialize};
 use eth_types::*;
 use near_sdk::collections::UnorderedMap;
 use near_sdk::AccountId;
-use near_sdk::{env, near_bindgen};
+use near_sdk::{env, near_bindgen, PanicOnDefault};
+use serde::{Deserialize, Serialize};
 
 #[cfg(target_arch = "wasm32")]
 #[global_allocator]
@@ -13,7 +14,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 #[cfg(test)]
 mod tests;
 
-#[derive(Default, Debug, Clone, BorshDeserialize, BorshSerialize)]
+#[derive(Default, Debug, Clone, BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 pub struct DoubleNodeWithMerkleProof {
     pub dag_nodes: Vec<H512>, // [H512; 2]
     pub proof: Vec<H128>,
