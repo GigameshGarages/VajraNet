@@ -1,9 +1,9 @@
 <div align="center">
 
-  <h1><code>Rainbow Bridge CLI</code></h1>
+  <h1><code>Vajra Money on Rainbow Bridge</code></h1>
 
   <p>
-    <strong>OPS tool to Rainbow Bridge, an Ethereum to Near trustless, fully decentralized, bidirectional bridge</strong>
+    <strong>Stablecoin Streaming on Rainbow Bridge, an Ethereum to Near trustless, fully decentralized, bidirectional bridge</strong>
   </p>
 
   <p>
