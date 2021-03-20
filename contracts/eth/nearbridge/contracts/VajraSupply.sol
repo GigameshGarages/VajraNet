@@ -19,13 +19,13 @@ import "./ReentrancyGuard.sol";
 import "./IBondingCurve.sol";
 import "./BancorFormula.sol";
 
-import "./SemiottToken.sol";
+import "./VajraMeasure.sol";
 
-contract SemiottCurve is Ownable, ReentrancyGuard, BancorFormula {
+contract VajraSupply is Ownable, ReentrancyGuard, BancorFormula {
 
   using SafeMath for uint256;
 
-  SemiottToken public mToken;
+  VajraMeasure public mToken;
   
       /*
         reserve ratio, represented in ppm, 1-1000000
@@ -40,7 +40,7 @@ contract SemiottCurve is Ownable, ReentrancyGuard, BancorFormula {
       
       require(_tokenAddress != address(0));
       // instantiate deployed Ocean token contract
-      mToken = SemiottToken(_tokenAddress);
+      mToken = VajraMeasure(_tokenAddress);
       // initial available supply of bonded token
       supply = 100;
       // inital price for bonded token
